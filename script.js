@@ -26,3 +26,22 @@ footer.appendChild(copyright);
 }
 
 });
+const reportForm = document.getElementById("reportForm");
+
+if(reportForm){
+
+reportForm.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const ticket="LSDWP-"+Math.floor(100000+Math.random()*900000);
+
+document.getElementById("ticket").textContent=ticket;
+
+document.getElementById("successMessage").style.display="block";
+
+reportForm.reset();
+
+});
+
+}
