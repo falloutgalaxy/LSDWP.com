@@ -285,3 +285,76 @@ border-radius:8px;
 font-weight:bold;
 
 }
+.staff-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+
+gap:30px;
+
+padding:40px;
+
+}
+
+.staff-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+text-align:center;
+
+}
+
+.staff-card img{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:6px solid #0B3D91;
+
+margin-bottom:20px;
+
+}
+
+.staff-card h2{
+
+font-size:32px;
+
+margin:0;
+
+}
+
+.staff-card h3{
+
+color:#0B3D91;
+
+margin-bottom:15px;
+
+}
+
+.active{
+
+color:green;
+
+font-weight:bold;
+
+}
+
+.training{
+
+color:#d89b00;
+
+font-weight:bold;
+
+}
