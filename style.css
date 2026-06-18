@@ -12,6 +12,8 @@ background:#f4f7fb;
 
 color:#1f2937;
 
+line-height:1.6;
+
 }
 
 /* =========================
@@ -32,6 +34,12 @@ padding:20px 40px;
 
 color:white;
 
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
 }
 
 .brand{
@@ -47,6 +55,22 @@ gap:20px;
 .brand img{
 
 width:80px;
+
+}
+
+.brand h2{
+
+margin:0;
+
+}
+
+.brand p{
+
+margin:0;
+
+font-size:14px;
+
+opacity:.9;
 
 }
 
@@ -72,11 +96,13 @@ text-decoration:none;
 
 font-weight:bold;
 
+transition:color .2s ease;
+
 }
 
 nav a:hover{
 
-text-decoration:underline;
+color:#F0B400;
 
 }
 
@@ -124,7 +150,15 @@ font-size:45px;
 
 margin-top:10px;
 
-color:#f0b400;
+color:#F0B400;
+
+}
+
+header p{
+
+font-size:18px;
+
+max-width:600px;
 
 }
 
@@ -132,11 +166,11 @@ color:#f0b400;
    BUTTONS
 ========================= */
 
-.buttons button{
+.buttons button,
+
+.join-button{
 
 padding:15px 25px;
-
-margin-right:10px;
 
 border:none;
 
@@ -150,9 +184,21 @@ cursor:pointer;
 
 font-weight:bold;
 
+font-size:16px;
+
+transition:background .2s ease;
+
 }
 
-.buttons button:hover{
+.buttons button{
+
+margin-right:10px;
+
+}
+
+.buttons button:hover,
+
+.join-button:hover{
 
 background:#082d6d;
 
@@ -180,13 +226,23 @@ color:white;
 
 }
 
+.page-header h1{
+
+margin-top:0;
+
+font-size:48px;
+
+}
+
 /* =========================
    STATUS & SERVICES
 ========================= */
 
 .status-grid,
 
-.service-grid{
+.service-grid,
+
+.join-grid{
 
 display:grid;
 
@@ -208,13 +264,37 @@ padding:30px;
 
 border-radius:12px;
 
-box-shadow:0 0 10px rgba(0,0,0,.1);
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+transition:transform .2s ease;
+
+}
+
+.status-card:hover,
+
+.service:hover,
+
+.project:hover{
+
+transform:translateY(-4px);
+
+}
+
+.status-card h3{
+
+margin-top:0;
 
 }
 
 /* =========================
    FLEET
 ========================= */
+
+.fleet{
+
+text-align:center;
+
+}
 
 .fleet img{
 
@@ -231,6 +311,106 @@ border-radius:12px;
 }
 
 /* =========================
+   STAFFING PAGE
+========================= */
+
+.staff-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+
+gap:40px;
+
+padding:40px;
+
+}
+
+.staff-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+text-align:center;
+
+transition:transform .2s ease;
+
+}
+
+.staff-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.staff-card img{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:6px solid #0B3D91;
+
+margin-bottom:20px;
+
+}
+
+.staff-card h2{
+
+font-size:32px;
+
+margin:0;
+
+}
+
+.staff-card h3{
+
+font-size:22px;
+
+color:#0B3D91;
+
+margin:10px 0 15px;
+
+}
+
+.staff-card p{
+
+margin:8px 0;
+
+}
+
+.status{
+
+font-weight:bold;
+
+}
+
+.active{
+
+color:green;
+
+font-weight:bold;
+
+}
+
+.training{
+
+color:#d89b00;
+
+font-weight:bold;
+
+}
+
+/* =========================
    JOIN LSDWP
 ========================= */
 
@@ -238,9 +418,9 @@ border-radius:12px;
 
 background:white;
 
-padding:80px 60px;
-
 text-align:center;
+
+padding:80px 60px;
 
 }
 
@@ -256,7 +436,7 @@ margin-bottom:20px;
 
 .join-lsdwp p{
 
-max-width:800px;
+max-width:850px;
 
 margin:15px auto;
 
@@ -264,33 +444,52 @@ line-height:1.8;
 
 }
 
-.join-button{
+/* =========================
+   PROJECTS
+========================= */
 
-padding:15px 30px;
+.project{
 
-border:none;
+padding:35px;
 
-border-radius:8px;
+margin-bottom:30px;
 
-background:#0B3D91;
-
-color:white;
-
-font-size:16px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-transition:background .2s ease;
+border-radius:15px;
 
 }
 
-.join-button:hover{
+.project h3{
 
-background:#082d6d;
+color:#0B3D91;
+
+font-size:32px;
+
+margin-top:0;
 
 }
+
+.project h4{
+
+margin-top:25px;
+
+color:#0B3D91;
+
+}
+
+.project ul{
+
+padding-left:25px;
+
+line-height:1.8;
+
+}
+
+.project li{
+
+margin-bottom:8px;
+
+}
+
 /* =========================
    FORMS
 ========================= */
@@ -357,6 +556,12 @@ text-align:center;
 
 }
 
+footer p{
+
+margin:5px 0;
+
+}
+
 /* =========================
    MOBILE
 ========================= */
@@ -368,6 +573,8 @@ header{
 flex-direction:column;
 
 text-align:center;
+
+padding:50px 25px;
 
 }
 
@@ -395,6 +602,8 @@ flex-direction:column;
 
 gap:20px;
 
+padding:20px;
+
 }
 
 nav ul{
@@ -405,49 +614,26 @@ justify-content:center;
 
 }
 
-}
-.project{
+.staff-grid{
 
-background:white;
+grid-template-columns:1fr;
 
-padding:35px;
-
-margin-bottom:30px;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+padding:20px;
 
 }
 
-.project h3{
+.staff-card img{
 
-color:#0B3D91;
+width:180px;
 
-font-size:32px;
-
-margin-top:0;
+height:180px;
 
 }
 
-.project h4{
+.join-lsdwp{
 
-margin-top:25px;
-
-color:#0B3D91;
+padding:60px 25px;
 
 }
-
-.project ul{
-
-padding-left:25px;
-
-line-height:1.8;
-
-}
-
-.project li{
-
-margin-bottom:8px;
 
 }
